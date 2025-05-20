@@ -1,3 +1,3 @@
 export default function Ecom() {
-    return <h1> Home Page</h1>
+    return <h1> E-commerce</h1>
 }
