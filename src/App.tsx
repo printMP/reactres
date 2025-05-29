@@ -1,12 +1,27 @@
-import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import { Routes, Route, Link, Navigate, useLocation } from 'react-router-dom';
 import './App.css'
 import Home from './pages/Home/Home'
 import Ecom from './pages/Ecom/Ecom'
 import Feature from './pages/Feature/Feature'
 import Resume from './pages/Resume/Resume'
+import {useEffect, useState} from 'react';
+
 
 
 export default function App() {
+  const location = useLocation();
+  const [currentPath, setCurrentPath] = useState<string>(location.pathname);
+
+  
+
+  useEffect(() => {
+    setCurrentPath(location.pathname);
+  }, [location]);
+
+
+  
+
+
   return (
     <div>
 
