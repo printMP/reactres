@@ -19,14 +19,23 @@ export default function App() {
   }, [location]);
 
 
-  
+    const isActive = (path: string) =>{
+      console.log("The currentPath is ",currentPath);
+      console.log("The past in path is ",path);
 
+      return currentPath === path
+    };
+  
 
   return (
     <div>
 
       <nav style={{ padding: '1em', background: '#eee'}}>
-        <Link to="/" style={{ marginRight: 'irem'}}>Home </Link>
+        <Link to="/"  style={{
+            marginRight: '1rem',
+            fontWeight: isActive('/') ? 'bold' : 'normal',
+            color: isActive('/') ? 'blue' : 'black', // Active link style
+          }}>Home </Link>
         <Link to="/Ecom" style={{ marginRight: 'irem' }}>Ecom </Link>
         <Link to="/Feature" style={{ marginRight: 'lrem' }}>Feature </Link>
         <Link to="/Resume" style={{ marginRight: 'irem'}}>Resume</Link>
