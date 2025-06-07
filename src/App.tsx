@@ -11,8 +11,8 @@ import {Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 
 function App(){
   const [count, setCount] = useState(0)
-  const location = useLocation()
-  const navigate = useNavigate()
+  // const location = useLocation()
+  // const navigate = useNavigate()
   const [url, setUrl] = useState('/');
 
   useEffect(
