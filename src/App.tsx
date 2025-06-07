@@ -13,8 +13,23 @@ function App(){
   const [count, setCount] = useState(0)
   const location = useLocation()
   const navigate = useNavigate()
+  const [url, setUrl] = useState('/');
 
+  useEffect(
+    () => {
+      const changeURL = () => {
+        setUrl(window.location.pathname);
+      }
+      window.addEventListener("popState", changeURL)
+
+      return () => {
+        window.removeEventListener("popstate", changeURL)
+      }
+    }, []
+
+  )
   
+
   useEffect(() => {
     localStorage.setItem('lastVisitedPath', location.pathname)
   }, [location.pathname])
