@@ -22,29 +22,15 @@ function App(){
       }
       window.addEventListener("popState", changeURL)
 
+      console.log("The URL is ", url)
+
       return () => {
         window.removeEventListener("popstate", changeURL)
       }
     }, []
 
   )
-  
-
-  useEffect(() => {
-    localStorage.setItem('lastVisitedPath', location.pathname)
-  }, [location.pathname])
-
-  
-  useEffect(() => {
-    const lastPath = localStorage.getItem('lastVisitedPath')
-
-    
-    if (lastPath && location.pathname === '/') {
-      navigate(lastPath, { replace: true })
-    }
-    console.log("The last path was",lastPath);
-  }, [])
-
+ 
   return (
     <>
     <nav>
