@@ -6,7 +6,7 @@ import Home from './pages/Home/Home'
 import Ecom from './pages/Ecom/Ecom'
 import Feature from './pages/Feature/Feature'
 import Resume from './pages/Resume/Resume'
-import {Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import {Link, Route, Routes} from 'react-router-dom'
 
 
 function App(){
