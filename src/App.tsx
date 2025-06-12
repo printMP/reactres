@@ -34,14 +34,14 @@ function App(){
   return (
     <>
     <nav>
-    <Link to = "/">Home</Link><br/>
+    <Link to = "/reactres">Home</Link><br/>
     <Link to = "/ecom">Ecom</Link><br/>
     <Link to = "/feature">Feature</Link><br/>
     <Link to = "/resume">Resume</Link>
     </nav>
 
     <Routes>
-      <Route path = "/"element={<Home/>}/>
+      <Route path = "/reactres"element={<Home/>}/>
       <Route path = "/ecom"element={<Ecom/>}/>
       <Route path = "/feature"element={<Feature/>}/>
       <Route path = "/resume"element={<Resume/>}/>
