@@ -13,7 +13,7 @@ function App(){
   const [count, setCount] = useState(0)
   // const location = useLocation()
   // const navigate = useNavigate()
-  const [url, setUrl] = useState('/');
+  const [url, setUrl] = useState("/");
 
   useEffect(
     () => {
