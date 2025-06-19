@@ -39,10 +39,9 @@ function App(){
       <Route path = "/ecom"element={<Ecom/>}/>
       <Route path = "/feature"element={<Feature/>}/>
       <Route path = "/resume"element={<Resume/>}/>
-      <Route path = "/Footer"element={<Footer/>}/>
     </Routes>
     
-     
+     <Footer/>
     </>
   )
 }
