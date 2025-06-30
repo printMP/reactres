@@ -14,6 +14,8 @@ const ProductList: React.FC = () => {
 }
     const [products, setProducts] = useState<Product[]>([])
 
+    console.log("This is ",products);
+    
     useEffect(() => {
         fetch('/store/products.json')  // JSON file on server
   .then(res => res.json())     // parse it to JS objects
