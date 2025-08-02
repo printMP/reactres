@@ -7,6 +7,7 @@ import Resume from './pages/Resume/Resume'
 import {Route, Routes} from 'react-router-dom'
 import Footer from './Components/Footer/Footer'
 import Header from "./Components/Header/Header"
+import Login from './pages/Login/Login'
 
 
 function App(){
@@ -39,6 +40,8 @@ function App(){
       <Route path = "/ecom"element={<Ecom/>}/>
       <Route path = "/feature"element={<Feature/>}/>
       <Route path = "/resume"element={<Resume/>}/>
+      <Route path = "/login"element={<Login/>}/>
+
     </Routes>
     
      <Footer/>

@@ -1,41 +1,71 @@
-import { Link } from 'react-router-dom'
-import "./Header.css"
+import { Link , useNavigate } from 'react-router-dom';
 import { useState } from 'react'
-//import logo pic
 
-function Header() {
-    const [isLoggedIn, setLogIn] = useState(false)
-    const name = "Maulin"
+
+function Header(){
+        const navigate = useNavigate();
+        const [isLoggedIn, setIsLoggedIn] = useState(false);
+        function login(){
+
+            navigate('/Login');
+            
+     }
+
+     function logout(){
+        
+        setIsLoggedIn(false)
+     }
+     console.log("user is ",isLoggedIn)
     return (
         <>
-            <div className="Header">
-                This is a Header
-                <nav>
-                    <Link to="/">Home</Link><br />
-                    <Link to="/ecom">Ecom</Link><br />
-                    <Link to="/feature">Feature</Link><br />
-                    <Link to="/resume">Resume</Link>
-                </nav>
-                {isLoggedIn ? 
-                    <div className="logOut">
-                        <span>Welcome {name}</span>
-                        &nbsp;
-                        <span onClick={() => setLogIn(false)}>Log Out</span>
-                    </div>
-                    :
+            <nav>
+                <Link to ="/">Home </Link>
+                <Link to ="/resume">Resume </Link>
+                <Link to ="/feature">Feature </Link>
+                <Link to ="/ecom">Ecom </Link>
+                <Link to ="/login">Login </Link>
+            </nav>
+            
+             {
+                 isLoggedIn?
+                 (
+                    <span>
+                        <span>
+                            Welcome Maulin
+                        </span>
 
-                    <div className="logIn">
-                        {/* Login will be automatically 'logged in' */}
-                        <span>Register</span>
-                        &nbsp;
-                        <span onClick={() => setLogIn(true)}>Log In</span>
-                    </div>
-                }
+                        <span onClick={ () => logout()}>
+                            logout
 
-            </div>
 
+                        </span>
+                    </span>
+                 )
+                 :
+                 (<span>
+                 
+                <span>
+                   
+                </span>
+                &nbsp; &nbsp;
+                
+                <span style={{ float: 'none', marginRight: '0em', cursor: 'pointer' }}onClick={ login}>
+                    login
+                    </span>
+                    
+
+                
+            </span>)
+
+                 }
+            <br></br>
+            
+    
         </>
-    )
+    );
+
+
 
 }
+
 export default Header

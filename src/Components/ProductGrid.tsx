@@ -1,6 +1,6 @@
 import React from "react";
 import { ProductCard } from "../Components/ProductCard";
-import type { products } from "../data/Product";
+import { products } from "../data/Product";
 
 export const ProductGrid: React.FC = () => {
   return (
