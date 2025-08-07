@@ -1,8 +1,12 @@
 import React from "react";
-import { ProductCard } from "../Components/ProductCard";
-import { products } from "../data/Product";
+import { ProductCard } from "./ProductCard";
+import type { Product } from "../data/Product";
 
-export const ProductGrid: React.FC = () => {
+interface ProductGridProps {
+  products: Product[];
+}
+
+export const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
   return (
     <div
       style={{

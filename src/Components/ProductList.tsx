@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 //import type { Product } from '../data/Product';
+import { ProductGrid } from "./ProductGrid"
 
 const ProductList: React.FC = () => {
     interface Product {
@@ -24,11 +25,7 @@ const ProductList: React.FC = () => {
 
     },[])
 
-    return (
-        <div>
-
-        </div>
-    )
+     return <ProductGrid products={products} />;
 }
 
 export default ProductList;
