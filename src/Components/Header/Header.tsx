@@ -49,9 +49,9 @@ function Header(){
                 </span>
                 &nbsp; &nbsp;
                 
-                <span style={{ float: 'none', marginRight: '0em', cursor: 'pointer' }}onClick={ login}>
+                {/* <span style={{ float: 'none', marginRight: '0em', cursor: 'pointer' }}onClick={ login}>
                     login
-                    </span>
+                    </span> */}
                     
 
                 
