@@ -9,7 +9,7 @@ export default function Resume() {
 
   const resumeText = `
 M* P*
-Email: M*@gmail.com
+Email: bonez7_2000@yahoo.com
 Phone: (423)3XX-XXXX
 
 Experience:
