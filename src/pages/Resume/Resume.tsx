@@ -8,9 +8,9 @@ export default function Resume() {
   };
 
   const resumeText = `
-Maulin Patel
-Email: MaulinPatel5@gmail.com
-Phone: (423)381-9820
+M* P*
+Email: M*@gmail.com
+Phone: (423)3XX-XXXX
 
 Experience:
 - Recently finished Fullstack Javascript bootcamp (React, React Native, TypeScript, Express.js, Node.js, bootstrap, Ajax,Jquery, CSS, HTML, Vite, MongoDB...etc)
